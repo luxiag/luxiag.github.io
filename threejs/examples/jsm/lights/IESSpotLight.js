@@ -1,0 +1,1 @@
+import{SpotLight}from"three";class IESSpotLight extends SpotLight{constructor(t,p,e,s,i,o){super(t,p,e,s,i,o),this.iesMap=null}copy(t,p){return super.copy(t,p),this.iesMap=t.iesMap,this}}export default IESSpotLight;

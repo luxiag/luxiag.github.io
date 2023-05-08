@@ -1,0 +1,1 @@
+import{Node}from"three/nodes";class SlotNode extends Node{constructor(e){super(e.nodeType),this.node=null,this.source=null,this.target=null,this.inclusionType="replace",Object.assign(this,e)}generate(e){return this.node.build(e,this.getNodeType(e))}}export default SlotNode;

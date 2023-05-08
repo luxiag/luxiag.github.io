@@ -1,0 +1,1 @@
+import WebGPUSampler from"../WebGPUSampler.js";class WebGPUNodeSampler extends WebGPUSampler{constructor(e,r){super(e,r.value),this.textureNode=r}getTexture(){return this.textureNode.value}}export default WebGPUNodeSampler;

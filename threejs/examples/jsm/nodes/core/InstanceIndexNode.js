@@ -1,0 +1,1 @@
+import Node,{addNodeClass}from"./Node.js";import{nodeImmutable}from"../shadernode/ShaderNode.js";class InstanceIndexNode extends Node{constructor(){super("uint"),this.isInstanceIndexNode=!0}generate(e){return e.getInstanceIndex()}}export default InstanceIndexNode;export const instanceIndex=nodeImmutable(InstanceIndexNode);addNodeClass(InstanceIndexNode);

@@ -1,0 +1,1 @@
+let _id=0;class WebGPUProgrammableStage{constructor(e,t,a){this.id=_id++,this.code=t,this.type=a,this.usedTimes=0,this.stage={module:e.createShaderModule({code:t,label:a}),entryPoint:"main"}}}export default WebGPUProgrammableStage;

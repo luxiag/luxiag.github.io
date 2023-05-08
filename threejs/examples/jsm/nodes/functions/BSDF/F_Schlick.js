@@ -1,0 +1,1 @@
+import{ShaderNode}from"../../shadernode/ShaderNode.js";const F_Schlick=new ShaderNode((e=>{const{f0:d,f90:o,dotVH:r}=e,u=r.mul(-5.55473).sub(6.98316).mul(r).exp2();return d.mul(u.oneMinus()).add(o.mul(u))}));export default F_Schlick;

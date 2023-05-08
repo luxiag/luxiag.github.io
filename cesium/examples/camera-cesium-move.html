@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.105/Build/Cesium/Cesium.js"></script>
+    <link
+      href="https://cesium.com/downloads/cesiumjs/releases/1.105/Build/Cesium/Widgets/widgets.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="cesiumContainer"></div>
+    <script>
+      const token =
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI3ZjRjYTEwNi0zZTljLTRmMjUtYTdlYi0yYjcxNTRmNzEyNDUiLCJpZCI6MTE5MDM1LCJpYXQiOjE2NzkxNDU5NjR9.0I7z7InLhK57lctyV2bUG0vKLryYKhxYEYF0RpEN4Xw";
+      Cesium.Ion.defaultAccessToken = token;
+
+      // Initialize the Cesium Viewer in the HTML element with the `cesiumContainer` ID.
+      const viewer = new Cesium.Viewer("cesiumContainer", {
+        // 是否显示信息窗口
+        infoBox: false,
+      });
+      // 生成position是天安门的位置
+      const position = Cesium.Cartesian3.fromDegrees(116.393428, 39.90923, 100);
+      viewer.camera.flyTo({
+        destination: position,
+        orientation: {
+          heading: Cesium.Math.toRadians(0),
+          pitch: Cesium.Math.toRadians(-20),
+          roll: 0,
+        },
+      });
+      // 通过按键移动相机
+      window.parent.document.addEventListener("keydown", (e) => {
+        // console.log(e);
+        // 获取相机离地面的高度
+        var height = viewer.camera.positionCartographic.height;
+        var moveRate = height / 10;
+        if (e.key == "w") {
+          // 设置相机向前移动
+          viewer.camera.moveForward(moveRate);
+        } else if (e.key == "s") {
+          // 设置相机向后移动
+          viewer.camera.moveBackward(moveRate);
+        } else if (e.key == "a") {
+          // 设置相机向左移动
+          viewer.camera.moveLeft(moveRate);
+        } else if (e.key == "d") {
+          // 设置相机向右移动
+          viewer.camera.moveRight(moveRate);
+        } else if (e.key == "q") {
+          // 设置相机向左旋转相机
+          viewer.camera.lookLeft(Cesium.Math.toRadians(0.1));
+        } else if (e.key == "e") {
+          // 设置相机向右旋转相机
+          viewer.camera.lookRight(Cesium.Math.toRadians(0.1));
+        } else if (e.key == "r") {
+          // 设置相机向上旋转相机
+          viewer.camera.lookUp(Cesium.Math.toRadians(0.1));
+        } else if (e.key == "f") {
+          // 设置相机向下旋转相机
+          viewer.camera.lookDown(Cesium.Math.toRadians(0.1));
+        } else if (e.key == "g") {
+          // 向左逆时针翻滚
+          viewer.camera.twistLeft(Cesium.Math.toRadians(0.1));
+        } else if (e.key == "h") {
+          // 向右顺时针翻滚
+          viewer.camera.twistRight(Cesium.Math.toRadians(0.1));
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+import LightingNode from"./LightingNode.js";import{addNodeClass}from"../core/Node.js";class AONode extends LightingNode{constructor(o=null){super(),this.aoNode=o}construct(o){const d=this.aoNode.sub(1).mul(1).add(1);o.context.ambientOcclusion.mulAssign(d)}}export default AONode;addNodeClass(AONode);

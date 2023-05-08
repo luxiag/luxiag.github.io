@@ -1,0 +1,1 @@
+import{ShaderNode}from"../shadernode/ShaderNode.js";export const getDistanceAttenuation=new ShaderNode((e=>{const{lightDistance:o,cutoffDistance:n,decayExponent:t}=e,a=o.pow(t).max(.01).reciprocal();return n.greaterThan(0).cond(a.mul(o.div(n).pow4().oneMinus().clamp().pow2()),a)}));

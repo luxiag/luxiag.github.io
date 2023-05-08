@@ -1,0 +1,1 @@
+let id=0;class NodeCache{constructor(){this.id=id++,this.nodesData=new WeakMap}getNodeData(e){return this.nodesData.get(e)}setNodeData(e,t){this.nodesData.set(e,t)}}export default NodeCache;

@@ -1,0 +1,1 @@
+import UniformNode from"./UniformNode.js";import{addNodeClass}from"./Node.js";class ArrayUniformNode extends UniformNode{constructor(o=[]){super(),this.isArrayUniformNode=!0,this.nodes=o}getNodeType(o){return this.nodes[0].getNodeType(o)}}export default ArrayUniformNode;addNodeClass(ArrayUniformNode);

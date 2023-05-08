@@ -1,0 +1,1 @@
+import{GPUChunkSize}from"./constants.js";function getFloatLength(t){return t+(GPUChunkSize-t%GPUChunkSize)%GPUChunkSize}function getVectorLength(t,e=4){return getFloatLength(getStrideLength(e)*t)}function getStrideLength(t){return t+(4-t%4)%4}export{getFloatLength,getVectorLength,getStrideLength};

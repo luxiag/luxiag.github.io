@@ -1,0 +1,1 @@
+class WebGPUProperties{constructor(){this.properties=new WeakMap}get(e){let t=this.properties.get(e);return void 0===t&&(t={},this.properties.set(e,t)),t}remove(e){this.properties.delete(e)}has(e){return this.properties.has(e)}dispose(){this.properties=new WeakMap}}export default WebGPUProperties;

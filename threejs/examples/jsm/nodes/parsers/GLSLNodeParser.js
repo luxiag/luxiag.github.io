@@ -1,0 +1,1 @@
+import NodeParser from"../core/NodeParser.js";import GLSLNodeFunction from"./GLSLNodeFunction.js";class GLSLNodeParser extends NodeParser{parseFunction(e){return new GLSLNodeFunction(e)}}export default GLSLNodeParser;

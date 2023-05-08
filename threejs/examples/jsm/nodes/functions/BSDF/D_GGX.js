@@ -1,0 +1,1 @@
+import{ShaderNode}from"../../shadernode/ShaderNode.js";const D_GGX=new ShaderNode((o=>{const{alpha:e,dotNH:d}=o,n=e.pow2(),r=d.pow2().mul(n.oneMinus()).oneMinus();return n.div(r.pow2()).mul(1/Math.PI)}));export default D_GGX;

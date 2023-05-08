@@ -1,0 +1,1 @@
+import{ShaderNode}from"../../shadernode/ShaderNode.js";const BRDF_Lambert=new ShaderNode((e=>e.diffuseColor.mul(1/Math.PI)));export default BRDF_Lambert;
