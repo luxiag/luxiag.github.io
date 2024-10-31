@@ -1,1 +1,0 @@
-class NodeFunction{constructor(t,n,o="",i=""){this.type=t,this.inputs=n,this.name=o,this.presicion=i}getCode(){console.warn("Abstract function.")}}NodeFunction.isNodeFunction=!0;export default NodeFunction;

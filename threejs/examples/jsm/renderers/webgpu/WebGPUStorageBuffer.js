@@ -1,1 +1,0 @@
-import WebGPUBuffer from"./WebGPUBuffer.js";import{GPUBindingType}from"./constants.js";class WebGPUStorageBuffer extends WebGPUBuffer{constructor(e,r){super(e,GPUBindingType.StorageBuffer,r.array),this.isStorageBuffer=!0,this.usage|=GPUBufferUsage.VERTEX|GPUBufferUsage.STORAGE,this.attribute=r}}export default WebGPUStorageBuffer;

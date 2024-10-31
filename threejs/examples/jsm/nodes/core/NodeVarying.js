@@ -1,1 +1,0 @@
-import NodeVar from"./NodeVar.js";class NodeVarying extends NodeVar{constructor(e,o){super(e,o),this.needsInterpolation=!1,this.isNodeVarying=!0}}export default NodeVarying;

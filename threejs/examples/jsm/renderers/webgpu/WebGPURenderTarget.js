@@ -1,1 +1,0 @@
-import{WebGLRenderTarget}from"three";class WebGPURenderTarget extends WebGLRenderTarget{constructor(e,r,t={}){super(e,r,t)}}export default WebGPURenderTarget;

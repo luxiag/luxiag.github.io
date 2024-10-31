@@ -1,1 +1,0 @@
-class WebGPUBinding{constructor(i=""){this.name=i,this.visibility=null,this.type=null,this.isShared=!1}setVisibility(i){this.visibility=i}}export default WebGPUBinding;

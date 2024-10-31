@@ -1,1 +1,0 @@
-import getGeometryRoughness from"./getGeometryRoughness.js";import{ShaderNode}from"../../shadernode/ShaderNode.js";const getRoughness=new ShaderNode((e=>{const{roughness:o}=e,s=getGeometryRoughness.call();let t=o.max(.0525);return t=t.add(s),t=t.min(1),t}));export default getRoughness;

@@ -1,1 +1,0 @@
-import WebGPUBuffer from"./WebGPUBuffer.js";import{GPUBindingType}from"./constants.js";class WebGPUUniformBuffer extends WebGPUBuffer{constructor(f,e=null){super(f,GPUBindingType.UniformBuffer,e),this.isUniformBuffer=!0,this.usage|=GPUBufferUsage.UNIFORM}}export default WebGPUUniformBuffer;

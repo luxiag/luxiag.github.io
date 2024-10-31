@@ -1,1 +1,0 @@
-class LightingModel{constructor(i=null,t=null,l=null,n=null){this.direct=i,this.indirectDiffuse=t,this.indirectSpecular=l,this.ambientOcclusion=n}}export default LightingModel;export const lightingModel=(...i)=>new LightingModel(...i);
